@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="primary">
+
+    <!--<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>-->
+
+    <ion-title>Ajouter un suivi</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-input type="number" placeholder="Le matricule de l'agent" name="matricule_agents" [(ngModel)]="matricule_agents">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Le suivi</ion-label>
+      <ion-input type="date" name="dates_suivi" [(ngModel)]="dates_suivi">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Prochain suivi</ion-label>
+      <ion-input type="date" name="prochaine_date_suivi" [(ngModel)]="prochaine_date_suivi"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="textarea" placeholder="Commentaire du suivi" name="commentaire_suivi" [(ngModel)]="commentaire_suivi"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div>
+  <button ion-button color="secondary" block (click)="addSuivi()">Valider</button>
+  </div>
+</ion-content>
